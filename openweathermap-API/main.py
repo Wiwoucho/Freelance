@@ -1,7 +1,8 @@
 import requests
 
 
-API_KEY = "API-KEY"            #API_KEY from the https://openweathermap.org/
+API_KEY = "YourAPIKey"
+            #API_KEY from the https://openweathermap.org/
 
 city = input("Input your city: ")                       #Input the desired city
 
@@ -27,7 +28,7 @@ max_temperature = round((city_weather_data["main"]["temp_max"]) - 273.15), "°C"
 min_temperature = round((city_weather_data["main"]["temp_min"]) - 273.15), "°C"
 skies_description = city_weather_data["weather"][0]["description"]                           #Also extracting the skies
 
-print(f"City: {city}")                                                                       #printing the desired info
+print(f"City: {city_weather_data['name']}")                                                                       #printing the desired info
 print(f"Current temperature: {''.join(str(x) for x in current_temperature)}")
 print(f"Max temperature for the day: {''.join(str(x) for x in max_temperature)}")
 print(f"Min temperature for the day: {''.join(str(x) for x in min_temperature)}")
