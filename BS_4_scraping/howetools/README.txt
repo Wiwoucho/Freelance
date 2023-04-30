@@ -1,0 +1,1 @@
+I made a basic script to extract name, model and the price of the products in the website. Using for loop I repeating the same procedure with incrementing the last element by 1, so the BS4 can scrape the next page and so on.
